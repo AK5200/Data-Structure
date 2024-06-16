@@ -9,3 +9,5 @@ string`
 console.log(str1);
 console.log(str2);
 console.log(str3)
+
+// solved 5 problems on leetcode 
