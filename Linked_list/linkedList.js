@@ -94,6 +94,47 @@ class LinkedList
          }
 
 
+         delFirst()
+         {
+            if(this.head == null)
+                {
+                    throw new Error("Linked list is empty");
+                }
+            this.head = this.head.next;
+         }
+
+         delLast()
+         {
+            if(!this.head)
+                return;
+
+            let element = this.head;
+            // 1  2   3  4   5
+            while(element.next.next)
+                {
+                    element = element.next;
+                }
+
+                element.next = null;
+         }
+
+         delAt(index)
+         {
+            // if(index < 0 || index > this.size())
+            //     throw new error("Invalid index");
+
+            let element = this.head;
+
+            for(let i=0; i<index-1;i++)
+                {
+                    element = element.next;
+                }
+
+                if(element.next)
+                element.next = element.next.next;
+         }
+
+
 
 } 
 
@@ -104,4 +145,6 @@ const linkedlist = new LinkedList();
 linkedlist.addFirst(1);
 linkedlist.addFirst(2);
 linkedlist.addFirst(3);
+linkedlist.addAt(3,5);
 linkedlist.print();
+
