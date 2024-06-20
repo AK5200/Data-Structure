@@ -128,3 +128,4 @@ console.log(cqueue.front());
 console.log(cqueue.rear());
 
 
+// solved implement stack using queues (leetcode)
